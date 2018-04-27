@@ -1,0 +1,283 @@
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%
+  font-family: 'Arimo', sans-serif;
+  
+
+}
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.content-left{
+	
+	background-size: calc(100% - 434px);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #0F2333;
+	height: 100vh;
+	width: calc(100% - 434px);
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 1;
+	animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; 
+}
+.content-right{
+	opacity: 1;
+	background-color: #273440;
+	right: 0;
+	top: 0;
+	width: 434px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	animation: fadein slidein 2s;
+	-moz-animation: fadein 2s;
+	-webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    bottom: 0;
+     
+
+}
+
+.dialog-view-container{
+	padding-bottom: 160px;
+	margin-top: 120px;
+	width: 300px;
+	box-sizing: border-box;
+	margin: 80px auto 25px;
+}
+.content-header{
+	position: relative;
+	margin-bottom: 20px;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: 100;
+	text-align: center;
+	padding-bottom: 0;
+	font-family: FestivoLettersNo1,Arial;
+}
+.body-content{
+	margin-top: 40px;
+	line-height: 1.2;
+	font-size: 18px;
+	font-family: "Myriad Pro", Verdana, Arial;
+	color: #c2c9c2;
+	font-weight: 400;
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.button-close{
+	top:50px;
+	width: 80px;
+	height: 80px;
+	right: 0px;
+	opacity: 1;
+	background-color: #273440;
+	text-align: center;
+	transition: all 1s;
+	position: absolute;
+	border:none;
+	cursor: pointer;
+
+}
+.button-close span:before{
+	content: "\2716";
+	font-size: 60px;
+	color: #f4511e;
+
+}
+.button-close:hover{
+	border: 0.5px solid #f4511e;
+
+}
+
+
+.button-next{
+	width: 217px;
+	height: 85px;
+	right: 0;
+	display: block;
+	bottom: 15px;
+	position: absolute;
+	background-color: #273440;
+	color: #f4511e;
+	font-size: 24px;
+	border:none;
+	cursor: pointer;
+	transition: all 2s;
+	
+}
+.button-next:before{
+	content: "\00bb";
+}
+.button-next:hover{
+	border: 0.5px solid #f4511e;
+}
+
+.button-prev{
+	width: 217px;
+	height: 85px;
+	left: 0;
+	display: block;
+	bottom: 15px;
+	position: absolute;
+	background-color: #273440;
+	color: #f4511e;
+	border:none;
+	cursor: pointer;
+	transition: all 2s;
+	font-size: 24px;
+}
+.button-prev: before{
+	content: "\00bb";
+}
+.button-prev:hover{
+	border:0.5px solid #f4511e;
+}
+
+.slider {
+
+  max-width: 100%;
+  height: 100%;
+  background-color: #191919;
+  animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s;
+
+    
+}
+.slider-wrapper {
+  width: calc(100% - 434px);
+  height: 100%;
+  position: absolute;
+  
+  
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 3s linear;
+  object-fit: scale-down;
+  text-align: center;
+}
+.caption{
+	font-family: helvetica;
+	font-size: 32px;
+	font-weight: 20px;
+	position: absolute;
+	left: 0;
+	color: #F5F5F5;
+}
+.slider-wrapper > .slide:first-child {
+  opacity: 1;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-wrapper > ul {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-wrapper > ul > li {
+    list-style: none;
+    background: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slider-wrapper > ul > li.active {
+    background: black;
+}
+
+
+  .prev,
+  .next {
+    top=30%
+  }
+}
+
